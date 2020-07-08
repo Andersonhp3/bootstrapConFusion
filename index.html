@@ -33,7 +33,7 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a class="nav-linl" href="" data-toggle="modal" data-target="#loginModal">
+                    <a class="nav-link" href="" data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -41,6 +41,74 @@
 
         </div>
     </nav>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-row form-group">
+                            <label for="numofguest" class="col-sm-2 col-12">Number of Guest</label>
+                            <div class="col-sm-1 col-3">
+                                <input type="radio" name="checked" id="num1">
+                                <label for="">1</label>
+                            </div>
+                            <div class="col-sm-1 col-3">
+                                <input type="radio" name="checked" id="num2">
+                                <label for="">2</label>
+                            </div>
+                            <div class="col-sm-1 col-3">
+                                <input type="radio" name="checked" id="num3">
+                                <label for="">3</label>
+                            </div>
+                            <div class="col-sm-1 col-3">
+                                <input type="radio" name="checked" id="num4">
+                                <label for="">4</label>
+                            </div>
+                            <div class="col-sm-1 col-3">
+                                <input type="radio" name="checked" id="num5">
+                                <label for="">5</label>
+                            </div>
+                            <div class="col-sm-1 col-3">
+                                <input type="radio" name="checked" id="num6">
+                                <label for="">6</label>
+                            </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <label for="numofguest" class="col-sm-2 col-12">Section</label>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                </label>
+                                <label class="btn btn-danger">
+                                  <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                </label>
+                              </div>
+                        </div>
+                        <div class="form-row form-group">
+                            <label class="col-sm-2 col-12" for="">Date and Time</label>
+                            <div class="col-12 col-sm-4">
+                                <input type="text" name="date" id="date" placeholder="Date" class="form-control">
+                            </div>
+                            <div class="col-12 col-sm-4">
+                                <input type="text" name="time" id="time" placeholder="Time" class="form-control">
+                            </div>
+                        </div>
+                        <div class="fomr-group row">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-secundary">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
@@ -94,11 +162,9 @@
                     <img src="images/logo.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <button class="btn btn-warning btn-block">
-                        <a href="#cardReserve" data-toggle="tooltip" data-html="true"
-                            title="or Call us at <br><strong>+8521234546</strong>" data-placement="bottom"> Reserve
-                            Table </a>
-                    </button>
+                    <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-warning"
+                     data-placement="bottom">
+                        Reserve Table </a>
                 </div>
             </div>
         </div>
@@ -138,9 +204,11 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <h2>Alberto Somayya</h2>
                                 <h4>Executive Chef</h4>
-                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International
+                                <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                    International
                                     experience having worked closely with
-                                    whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion
+                                    whos-who in the culinary world, he specializes in creating mouthwatering
+                                    Indo-Italian fusion
                                     experiences. </p>
                             </div>
                         </div>
@@ -224,47 +292,49 @@
                 <div class="card">
                     <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
                     <div class="card-body">
-                        <div class="row form-group">
-                            <label for="numofguest" class="col-sm-2 col-12">Number of Guest</label>
-                            <div class="col-sm-1 col-3">
-                                <input type="radio" name="num1" id="num1">
-                                <label for="">1</label>
+                        <form action="">
+                            <div class="row form-group">
+                                <label for="numofguest" class="col-sm-2 col-12">Number of Guest</label>
+                                <div class="col-sm-1 col-3">
+                                    <input type="radio" name="num1" id="num1">
+                                    <label for="">1</label>
+                                </div>
+                                <div class="col-sm-1 col-3">
+                                    <input type="radio" name="num2" id="num2">
+                                    <label for="">2</label>
+                                </div>
+                                <div class="col-sm-1 col-3">
+                                    <input type="radio" name="num3" id="num3">
+                                    <label for="">3</label>
+                                </div>
+                                <div class="col-sm-1 col-3">
+                                    <input type="radio" name="num4" id="num4">
+                                    <label for="">4</label>
+                                </div>
+                                <div class="col-sm-1 col-3">
+                                    <input type="radio" name="num5" id="num5">
+                                    <label for="">5</label>
+                                </div>
+                                <div class="col-sm-1 col-3">
+                                    <input type="radio" name="num6" id="num6">
+                                    <label for="">6</label>
+                                </div>
                             </div>
-                            <div class="col-sm-1 col-3">
-                                <input type="radio" name="num2" id="num2">
-                                <label for="">2</label>
+                            <div class="row form-group">
+                                <label class="col-sm-2 col-12" for="">Date and Time</label>
+                                <div class="col-12 col-sm-4">
+                                    <input type="text" name="date" id="date" placeholder="Date" class="form-control">
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <input type="text" name="time" id="time" placeholder="Time" class="form-control">
+                                </div>
                             </div>
-                            <div class="col-sm-1 col-3">
-                                <input type="radio" name="num3" id="num3">
-                                <label for="">3</label>
+                            <div class="fomr-group row">
+                                <div class="offset-md-2 col-md-10">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
                             </div>
-                            <div class="col-sm-1 col-3">
-                                <input type="radio" name="num4" id="num4">
-                                <label for="">4</label>
-                            </div>
-                            <div class="col-sm-1 col-3">
-                                <input type="radio" name="num5" id="num5">
-                                <label for="">5</label>
-                            </div>
-                            <div class="col-sm-1 col-3">
-                                <input type="radio" name="num6" id="num6">
-                                <label for="">6</label>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <label class="col-sm-2 col-12" for="">Date and Time</label>
-                            <div class="col-12 col-sm-4">
-                                <input type="text" name="date" id="date" placeholder="Date" class="form-control">
-                            </div>
-                            <div class="col-12 col-sm-4">
-                                <input type="text" name="time" id="time" placeholder="Time" class="form-control">
-                            </div>
-                        </div>
-                        <div class="fomr-group row">
-                            <div class="offset-md-2 col-md-10">
-                                <button type="submit" class="btn btn-primary">Reserve</button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -320,11 +390,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+
 </body>
 
 </html>
