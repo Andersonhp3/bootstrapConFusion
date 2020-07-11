@@ -7,10 +7,14 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- endbuild -->
+
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -33,7 +37,7 @@
                                 class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a class="nav-link" href="" data-toggle="modal" data-target="#loginModal">
+                    <a class="nav-link" id="login">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -47,7 +51,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="closeReserve">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form action="">
@@ -93,10 +97,10 @@
                         <div class="form-row form-group">
                             <label class="col-sm-2 col-12" for="">Date and Time</label>
                             <div class="col-12 col-sm-4">
-                                <input type="text" name="date" id="date" placeholder="Date" class="form-control">
+                                <input type="text" name="date" id="date1" placeholder="Date" class="form-control">
                             </div>
                             <div class="col-12 col-sm-4">
-                                <input type="text" name="time" id="time" placeholder="Time" class="form-control">
+                                <input type="text" name="time" id="time2" placeholder="Time" class="form-control">
                             </div>
                         </div>
                         <div class="fomr-group row">
@@ -117,7 +121,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="closeLogin">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -163,7 +167,7 @@
                     <img src="images/logo.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a role="button" data-toggle="modal" data-target="#reserveModal" class="btn btn-block btn-warning"
+                    <a role="button" id="reserve" class="btn btn-block btn-warning"
                         data-placement="bottom">
                         Reserve Table </a>
                 </div>
@@ -300,27 +304,27 @@
                             <div class="row form-group">
                                 <label for="numofguest" class="col-sm-2 col-12">Number of Guest</label>
                                 <div class="col-sm-1 col-3">
-                                    <input type="radio" name="num1" id="num1">
+                                    <input type="radio" name="Che" id="num12">
                                     <label for="">1</label>
                                 </div>
                                 <div class="col-sm-1 col-3">
-                                    <input type="radio" name="num2" id="num2">
+                                    <input type="radio" name="num2" id="num22">
                                     <label for="">2</label>
                                 </div>
                                 <div class="col-sm-1 col-3">
-                                    <input type="radio" name="num3" id="num3">
+                                    <input type="radio" name="num3" id="num32">
                                     <label for="">3</label>
                                 </div>
                                 <div class="col-sm-1 col-3">
-                                    <input type="radio" name="num4" id="num4">
+                                    <input type="radio" name="num4" id="num42">
                                     <label for="">4</label>
                                 </div>
                                 <div class="col-sm-1 col-3">
-                                    <input type="radio" name="num5" id="num5">
+                                    <input type="radio" name="num5" id="num52">
                                     <label for="">5</label>
                                 </div>
                                 <div class="col-sm-1 col-3">
-                                    <input type="radio" name="num6" id="num6">
+                                    <input type="radio" name="num6" id="num62">
                                     <label for="">6</label>
                                 </div>
                             </div>
@@ -391,30 +395,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#mycarousel').carousel({
-                interval: 2000
-            });
-            $("#carouselButton").click(function () {
-                if($("#carouselButton").children("span").hasClass("fa-pause")){
-                    $("#mycarousel").carousel("pause");
-                    $("#carouselButton").children("span").removeClass("fa-pause");
-                    $("#carouselButton").children("span").addClass("fa-play");
-                }
-                else if($("#carouselButton").children("span").hasClass("fa-play")){
-                    $("#mycarousel").carousel("cycle");
-                    $("#carouselButton").children("span").removeClass("fa-play");
-                    $("#carouselButton").children("span").addClass("fa-pause");
-                }
-                             
-            });
-        });
-    </script>
-
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
